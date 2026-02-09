@@ -1,0 +1,38 @@
+site_name: "Epistasia"
+site_url: "https://MCMateu.github.io/epistasia/"
+repo_url: "https://github.com/MCMateu/epistasia"
+repo_name: "MCMateu/epistasia"
+edit_uri: "edit/main/epistasia_web/docs/"
+
+theme:
+  name: null
+  custom_dir: cinder/cinder
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      execute: false
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+      smart_dollar: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+ 
+extra:
+  github_repo: "https://github.com/MCMateu/epistasia"
+  docs_url: "https://MCMateu.github.io/epistasia/"
+
+nav:
+  - Home: index.md
+  - Tutorials:
+      - Introduction: notebooks/Tutorial_pag1.ipynb
+      - Local epistasis: notebooks/Tutorial_page2.ipynb
+      - Background-averaged interactions: notebooks/Tutorial_page3.ipynb
+      - Batch-effect correction: notebooks/Tutorial_page4.ipynb
+      - Tests with synthetic landscapes: notebooks/Tutorial_page5.ipynb
+      - Empirical analysis: notebooks/Tutorial_page6.ipynb
+
