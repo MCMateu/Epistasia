@@ -1,0 +1,33 @@
+### TICKS CONFIGURATION ###
+# Major Tick Length (size=9)
+xtick.major.size: 9.0
+ytick.major.size: 9.0
+# Minor Tick Length
+xtick.minor.size: 6.0
+ytick.minor.size: 6.0
+
+# Major Tick Width (width=2.5)
+xtick.major.width: 2.5
+ytick.major.width: 2.5
+# Minor Tick Width
+xtick.minor.width: 1.5
+ytick.minor.width: 1.5
+
+### TICK LABELS ###
+# Tick Label Font Size (labelsize=15)
+xtick.labelsize: 12
+ytick.labelsize: 12
+
+### SPINES/AXES LINE WIDTH ###
+# Frame/Spines Line Width (set_linewidth(3))
+axes.linewidth: 2.0
+
+### EXTRA FORMATTING ###
+axes.titlesize: 12
+axes.labelsize: 12
+font.size: 12
+
+### Remove frames
+
+axes.spines.top: False
+axes.spines.right: False
