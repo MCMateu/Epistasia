@@ -29,10 +29,10 @@ extra:
 nav:
   - Home: index.md
   - Tutorials:
-      - Introduction: notebooks/Tutorial_pag1.ipynb
-      - Local epistasis: notebooks/Tutorial_page2.ipynb
-      - Background-averaged interactions: notebooks/Tutorial_page3.ipynb
-      - Batch-effect correction: notebooks/Tutorial_page4.ipynb
-      - Tests with synthetic landscapes: notebooks/Tutorial_page5.ipynb
-      - Empirical analysis: notebooks/Tutorial_page6.ipynb
+      - 1. Introduction: notebooks/Tutorial_pag1.ipynb
+      - 2. Local epistasis: notebooks/Tutorial_page2.ipynb
+      - 3. Background-averaged interactions: notebooks/Tutorial_page3.ipynb
+      - 4. Batch-effect correction: notebooks/Tutorial_page4.ipynb
+      - 5. Tests with synthetic landscapes: notebooks/Tutorial_page5.ipynb
+      - 6. Empirical analysis: notebooks/Tutorial_page6.ipynb
 
