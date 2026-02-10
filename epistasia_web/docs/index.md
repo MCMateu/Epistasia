@@ -44,7 +44,7 @@ much of the functional variance is explained by additive and pairwise terms?*
 - From GitHub:
 
 ```bash
-pip install "epistasia @ git+https://github.com/MCMateu/epistasia.git"
+pip install "epistasia @ git+https://github.com/MCMateu/Epistasia.git"
 ```
 
 ## Quick start
