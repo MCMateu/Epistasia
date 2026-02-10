@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://MCMateu.github.io/epistasia/">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    
+    <title>Home - Epistasia</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body class="homepage" >
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href=".">Epistasia</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="active">
+                        <a href=".">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="notebooks/Tutorial_pag1/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="notebooks/Tutorial_page2/">Local epistasis</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="notebooks/Tutorial_page3/">Background-averaged interactions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="notebooks/Tutorial_page4/">Batch effect correction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="notebooks/Tutorial_page5/">Tests with synthetic landscapes</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="notebooks/Tutorial_page6/">Empirical analysis</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="notebooks/Tutorial_pag1/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/MCMateu/epistasia/edit/main/epistasia_web/docs/index.md">Edit on MCMateu/epistasia</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#epistasia-a-library-for-analizing-binary-landscapes">Epistasia: a library for analizing binary landscapes</a></li>
+            <li class="second-level"><a href="#what-is-a-landscape">What is a landscape?</a></li>
+                
+            <li class="second-level"><a href="#what-does-epistasia-do">What does Epistasia do?</a></li>
+                
+            <li class="second-level"><a href="#download-epistasia">Download epistasia</a></li>
+                
+            <li class="second-level"><a href="#quick-start">Quick start</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="epistasia-a-library-for-analizing-binary-landscapes">Epistasia: a library for analizing binary landscapes</h1>
+<p align="center">
+  <img src="figures/LandscapeDefSi.svg" width="850" alt="Landscape schematic">
+</p>
+
+<h2 id="what-is-a-landscape">What is a landscape?</h2>
+<p>In ecology and genetics, we often deal with systems composed of several interacting components — such as species in a community, genes in a genome, or mutations in a genotype. Each component can be <strong>present (1)</strong> or <strong>absent (0)</strong>, so the set of all possible configurations can be represented as</p>
+<div class="arithmatex">\[\begin{equation}
+\mathbb{F}_2^N = \{0,1\}^N,
+\end{equation}\]</div>
+<p>where <span class="arithmatex">\(N\)</span> is the number of components, and the space contains <span class="arithmatex">\(2^N\)</span> possible combinations.</p>
+<p>A <strong>landscape</strong> is a mathematical function</p>
+<div class="arithmatex">\[\begin{equation}
+F : \mathbb{F}_2^N \rightarrow \mathbb{R},
+\end{equation}\]</div>
+<p>that assigns a quantitative property to each configuration — for example, total biomass, growth rate, ecosystem productivity, or fitness.  In biological terms, it tells us <em>how the system performs depending on which components are active</em>.</p>
+<p>In practice, a landscape dataset consists of a collection of measured pairs <span class="arithmatex">\((\mathbf{x}, F)\)</span>,   where each vector <span class="arithmatex">\(\mathbf{x} = (x_1, x_2, \ldots, x_N)\)</span> indicates the presence (1) or absence (0) of each component,  and <span class="arithmatex">\(F(\mathbf{x})\)</span> is the measured outcome. Many experiments also include several replicates <span class="arithmatex">\(R\)</span> for the same configuration, to account for experimental variability.</p>
+<p>Such datasets form a <strong>discrete, high-dimensional map</strong> linking the composition of the system  (e.g., which species or genes are present) to an emergent property at the system level. By analyzing these landscapes, we can uncover <strong>interactions</strong>, <strong>nonlinear effects</strong>,  and <strong>higher-order dependencies</strong> that shape the collective behavior of complex biological systems.</p>
+<h2 id="what-does-epistasia-do">What does Epistasia do?</h2>
+<p><strong>Epistasia</strong> is a Python toolkit to analyze <strong>binary landscapes</strong> (genotype–phenotype or community–function maps) and quantify <strong>interactions across orders</strong>, from additive effects to higher-order terms.</p>
+<p>Epistasia is designed around three core questions:</p>
+<ol>
+<li>Which <strong>local, context-dependent interactions</strong> can be detected given experimental noise?</li>
+<li>Which <strong>background-averaged interactions</strong> remain statistically identifiable across orders?</li>
+<li>Which interaction orders <strong>matter functionally</strong>, as quantified by the variance spectrum?</li>
+</ol>
+<p>The library implements noise-aware estimators, bootstrap null models, and variance decompositions to address these questions in empirical, synthetic, and mechanistic landscapes.
+much of the functional variance is explained by additive and pairwise terms?*</p>
+<h2 id="download-epistasia">Download epistasia</h2>
+<ul>
+<li>From GitHub:</li>
+</ul>
+<pre><code class="language-bash">pip install &quot;epistasia @ git+https://github.com/MCMateu/epistasia.git&quot;
+</code></pre>
+<h2 id="quick-start">Quick start</h2>
+<pre><code class="language-python">import epistasia as ep
+
+L = ep.landscape_from_file(&quot;my_landscape.csv&quot;)   # x1..xN, F (and optionally replicate column)
+out = ep.walsh_analysis(L)
+
+ep.plot_variance_and_amplitude(out)
+ep.plot_walsh_volcano(out)
+</code></pre></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "."</script>
+    
+    <script src="js/base.js"></script>
+    <script src="javascripts/mathjax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-02-10 09:37:02.145566+00:00
+-->
