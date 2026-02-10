@@ -4,8 +4,8 @@
 (genotype–phenotype or community–function maps) and quantify epistatic
 interactions across orders.
 
-📘 Documentation: https://MCMateu.github.io/epistasia/  
-💻 Source code: https://github.com/MCMateu/epistasia
+📘 Documentation: https://MCMateu.github.io/Epistasia/  
+💻 Source code: https://github.com/MCMateu/Epistasia
 
 ---
 
@@ -14,7 +14,7 @@ interactions across orders.
 ### From GitHub (recommended while the API is evolving)
 
 ```bash
-pip install "epistasia @ git+https://github.com/MCMateu/epistasia.git"
+pip install "epistasia @ git+https://github.com/MCMateu/Epistasia.git"
 ```
 
 ### Editable install (development)
