@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epistasia"
+version = "0.1.0"
+description = "Epistasia is a Python toolkit to analyze binary landscapes"
+authors = [
+  { name="Jose", email="j.manuelcm6@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+  "numpy",
+  "scipy",
+  "pandas",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
